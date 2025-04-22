@@ -1,0 +1,398 @@
+:root {
+    --primary-color: #e5b8b8;
+    --secondary-color: #262626;
+    --accent-color: #d88a8a;
+    --light-color: #f9f1f1;
+    --dark-color: #1a1a1a;
+    --font-main: 'Cormorant Garamond', serif;  /* Tipografía principal más sensual */
+    --font-accent: 'Baskerville', serif;       /* Tipografía de acento más elegante y sensual */
+}
+
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    line-height: 1.6;
+    font-size: 18px; /* Tamaño base más grande para el texto */
+    font-weight: 300; /* Texto más delgado para elegancia */
+}
+
+/* Header */
+header {
+    background-color: var(--light-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-family: 'Italiana', serif; /* Fuente más sensual para el logo */
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+    font-family: 'Cinzel', serif; /* Fuente elegante para la navegación */
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-color: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 2rem;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Italiana', serif; /* Fuente más sensual para títulos principales */
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    font-weight: normal;
+    letter-spacing: 5px;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    font-style: italic; /* Texto en cursiva para más sensualidad */
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    font-family: 'Cinzel', serif; /* Fuente elegante para botones */
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    object-fit: cover;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 2rem;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Italiana', serif; /* Fuente sensual para títulos de sección */
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Products Section */
+.products {
+    padding: 5rem 2rem;
+    background-color: var(--light-color);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-title {
+    font-family: 'Cinzel', serif; /* Fuente elegante para títulos de productos */
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-weight: normal;
+}
+
+.product-price {
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.product-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.7rem 0;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    font-family: 'Cinzel', serif; /* Fuente elegante para botones */
+    letter-spacing: 1px;
+}
+
+.product-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 2rem;
+    background-color: white;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    font-family: 'Cinzel', serif; /* Fuente elegante para etiquetas */
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Cinzel', serif; /* Fuente elegante para botones */
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-family: 'Italiana', serif; /* Fuente sensual para títulos de footer */
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: var(--font-main);
+}
+
+.social-icon:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.copyright {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
